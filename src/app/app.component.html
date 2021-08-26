@@ -1,0 +1,28 @@
+<div class="fluid-container">
+  <div class="fluid-container mb-3">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <a class="navbar-brand ms-4" href="#">GiftGalaxy</a>
+    <button class="navbar-toggler" type="button" data-bs-target="#nav" data-bs-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-primary" aria-current="page" routerLink="home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active  text-primary" aria-current="page" routerLink="register" routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item" *ngIf="!us.userLoginStatus">
+          <a class="nav-link active  text-primary" aria-current="page" routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="us.userLoginStatus">
+          <a class="nav-link active  text-primary" aria-current="page" routerLink="login" routerLinkActive="active" (click)="userLogout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+    
+  </nav>
+</div>
+<router-outlet></router-outlet>
+</div>

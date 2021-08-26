@@ -1,0 +1,10 @@
+<div class="d-block w-25 mx-auto">
+<h3 class="text-center">Login</h3>
+<form #ref="ngForm" (ngSubmit)="onLogin(ref.value)">
+<label for="un" class="form-label">Username</label>
+<input type="text" name="username" id="un" class="form-control" ngModel>
+<label for="pw" class="form-label">Password</label>
+<input type="password" name="password" id="pw" class="form-control" ngModel>
+<button type="submit" class="btn btn-success d-block mx-auto mt-4"  id="btn2">Login</button>
+</form>
+</div>

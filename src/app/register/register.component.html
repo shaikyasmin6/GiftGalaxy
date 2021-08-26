@@ -1,0 +1,22 @@
+
+<div class="d-block w-50 mx-auto">
+    <h4 class="text-center">Sign Up</h4>
+    <form #ref="ngForm" (ngSubmit)="onSignUp(ref.value)">
+    
+        <label for="un" class="form-label">Username</label>
+        <input type="text" id="un" name="username" class="form-control" ngModel>
+
+        <label for="pw" class="form-label">Password</label>
+        <input type="password" id="pw" name="password" class="form-control" ngModel>
+
+        <label for="em" class="form-label">Email</label>
+        <input type="email" id="em" name="email" class="form-control" ngModel>
+
+           <label for="DOB" class="form-label">Date of Birth</label>
+        <input type="date" id="DOB" name="dateofbirth" class="form-control" ngModel>
+
+        <input type="file" name="photo" class="from-control mt-3" ngModel (change)="selectFile($event)">
+        <button type="submit" class="btn btn-success d-block mx-auto mt-3" id="btn1">SignUp</button>
+    </form>
+</div>   
+    
